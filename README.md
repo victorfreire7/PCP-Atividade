@@ -1,8 +1,8 @@
 ## Grupo:
-- [Victor Hugo Freire](https://github.com/victorfreire7)
-- [Lucas Melchior](https://github.com/itrolucas)
-- [Gustavo Rocha](https://github.com/gustavo-rocha-batista)
-- [Davi R. Silva](https://github.com/NyixTAA)
+- [Victor Hugo Freire](https://github.com/victorfreire7) / RM: 571099
+- [Lucas Melchior](https://github.com/itrolucas) / RM: 574027
+- [Gustavo Rocha](https://github.com/gustavo-rocha-batista) / RM: 570672
+- [Davi R. Silva](https://github.com/NyixTAA) / RM: 571744
 
 ---
 
