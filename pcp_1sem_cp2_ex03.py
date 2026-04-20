@@ -1,13 +1,13 @@
-def notaCheckpoint(cp1, cp2, cp3):
+def notaCheckpoint(cp1, cp2, cp3): # extraio a soma da 2 maiores notas dos CheckPoint
     ar = [cp1, cp2, cp3];
     ar.sort();
 
     return ar[2] + ar[1];
 
-def notaSprint(sp1, sp2):
+def notaSprint(sp1, sp2): # retorno a soma das duas sprint
     return sp1 + sp2;
 
-def validator(args):
+def validator(args): # todas as validações do que foi enviado aqui
     for i in range(len(args)):
         if args[i] > 10 or args[i] < 0:
             print("----------------------------------------");
@@ -24,9 +24,9 @@ def notaSemestre(arr): # arr[0] = cp1    arr[1] = cp2      arr[2] = cp3     arr[
     media = (arit * 0.4) + (arr[5] * 0.6);
     mediaPeso = media * 0.4;
 
-    print("---------------------------------")
-    print(f"Média do semestre: {media}")
-    print(f"Média do semestre com peso: {mediaPeso}")
+    print("---------------------------------");
+    print(f"Média do semestre: {media}");
+    print(f"Média do semestre com peso: {mediaPeso:.2f}");
 
 
 cp1 = float(input('Qual foi a nota do seu Checkpoint 1? '));
@@ -38,4 +38,4 @@ sp2 = float(input('Qual foi a nota da sua 2º Sprint? '));
 
 gs = float(input('Qual foi a nota da sua Global Solution? '));
 
-notaSemestre([cp1, cp2, cp3, sp1, sp2, gs])
+notaSemestre([cp1, cp2, cp3, sp1, sp2, gs]); # envio como array, pra realizar um tratamento mais simplificado dos dados
