@@ -1,4 +1,3 @@
-from time import sleep
 def pode_aprovar(idade,renda,valor):
     if idade >= 18 and (renda * 20) >= valor:
         return "APROVADO"
@@ -22,16 +21,15 @@ def calcular_total(parcela,parcelas):
     valorfinal = parcela * parcelas
     return valorfinal
 
+def calcular_juros(total, valor):
+    
+
+
 nome = str(input('Nome do Cliente: ')).capitalize().strip()
-sleep(0.5)
 idade = int(input('Idade do Cliente: '))
-sleep(0.5)
 renda = float(input('Renda Mensal: '))
-sleep(0.5)
 valor = float(input('Valor do empréstimo: '))
-sleep(0.5)
 parcelas = int(input('Números de parcelas: '))
-sleep(0.5)
 while 24 < parcelas or parcelas <= 2:
     parcelas = int(input('Valor inválido!!! Tente novamente... [3X-24X] '))
 
@@ -39,14 +37,11 @@ taxa = definir_taxa(parcelas)
 parcela = calcular_parcela(valor, taxa, parcelas)
 total = calcular_total(parcela, parcelas)
 aprovado = pode_aprovar(idade, renda, valor)
+
 if aprovado:
     print(f'\nO nome do cliente é: {nome}')
-    sleep(0.5)
     print(f'A taxa em questão é: {taxa*100:.0f}%')
-    sleep(0.5)
     print(f'o valor da parcela é: R${parcela:.2f}')
-    sleep(0.5)
-    print(f'o valor total é: R${total:.2f}')
-    sleep(0.5)
+    print(f'o valor total é: R${total:.2f}')  
 else:
     print(f'Cliente {nome} reprovado')
