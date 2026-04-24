@@ -1,21 +1,34 @@
-def função(a,b,c):
-    if a >= (b + c):
-        print('NÃO FORMA TRIÂNGULO')
-    elif a == b == c:
-        print('FORMA TRIÂNGULO EQUILÁTERO')
-    elif (a * 2) == (b * 2) + (c ** 2):
-        print('FORMA TRIÂNGULO RETÂNGULO')
-    elif(a*2) > (b * 2) > (c*2):
-        print('FORMA TRIÂNGULO OBTUSÂNGULO')
-    elif (a*2) > (b * 2) + (c*2):
-        print('FORMA TRIÂNGULO OBTUSÂNGULO')
-    elif (a*2) < (b * 2) + (c*2):
-        print('FORMA TRIÂNGULO ACUTÂNGULO')
-    return a,b,c
+import math
 
+a = float(input("Lado a: "))
+b = float(input("Lado b: "))
+c = float(input("Lado c: "))
 
+lados = (a, b, c)
+lados = sorted(lados, reverse=True)
 
-a = float(input('Lado A do triângulo: '))
-b = float(input('Lado B do triângulo: '))
-c = float(input('Lado C do triângulo: '))
-função(a,b,c)
+forma_tri = not lados[0] >= lados[1]+lados[2]
+
+tri_ret =  lados[0]**2 == lados[1]**2 + lados[2]**2
+
+tri_obtuso = lados[0]**2 > lados[1]**2 + lados[2]**2
+
+tri_acu = lados[0]**2 < lados[1]**2 + lados[2]**2
+
+tri_equi = lados[0] == lados[1] == lados[2]
+
+tri_iso = lados[0] == lados[1] != lados[2] or lados[1] == lados[2] != lados[0] or lados[2] == lados[0] != lados[1]
+
+if forma_tri:
+    if tri_equi:
+        print("TRIÂNGULO EQUILÁTERO")
+    elif tri_iso:
+        print("TRIÂNGULO ISÓSCELES")
+    if tri_ret:
+        print("TRIÂNGULO RETÂNGULO")
+    elif tri_obtuso:
+        print("TRIÂNGULO OBTUSÂNGULO")
+    elif tri_acu:
+        print("TRIÂNGULO ACUTÂNGULO")
+else:
+    print("NÃO FORMA TRIÂNGULO")
