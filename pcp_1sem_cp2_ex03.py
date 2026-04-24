@@ -26,7 +26,7 @@ def notaSemestre(arr): # arr[0] = cp1    arr[1] = cp2      arr[2] = cp3     arr[
 
     print("---------------------------------");
     print(f"Média do semestre: {media}");
-    print(f"Média do semestre com peso: {mediaPeso:.2f}");
+    print(f"Média do semestre com peso: {mediaPeso:.1f}");
 
 
 cp1 = float(input('Qual foi a nota do seu Checkpoint 1? '));
