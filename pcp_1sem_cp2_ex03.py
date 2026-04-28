@@ -1,8 +1,12 @@
-def notaCheckpoint(cp1, cp2, cp3): # extraio a soma da 2 maiores notas dos CheckPoint
-    ar = [cp1, cp2, cp3];
-    ar.sort();
+def notaCheckpoint(cp1, cp2, cp3):
+    if cp1 <= cp2 and cp1 <= cp3:
+        menor = cp1
+    elif cp2 <= cp1 and cp2 <= cp3:
+        menor = cp2
+    else:
+        menor = cp3
 
-    return ar[2] + ar[1];
+    return (cp1 + cp2 + cp3) - menor
 
 def notaSprint(sp1, sp2): # retorno a soma das duas sprint
     return sp1 + sp2;
