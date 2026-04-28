@@ -1,5 +1,5 @@
 def pode_aprovar(idade, renda, valor):
-    if idade <= 18:
+    if idade < 18:
         return False
     if (renda * 20) < valor:
         return False
@@ -39,7 +39,7 @@ while parcelas < 3 or parcelas > 24:
 
 if not pode_aprovar(idade, renda, valor):
     print(f'\nEmpréstimo NEGADO para {nome}.')
-    if idade <= 18:
+    if idade < 18:
         print('Motivo: cliente deve ter mais de 18 anos.')
     if (renda * 20) < valor:
         print(f'Motivo: valor solicitado excede 20x a renda mensal (limite: R$ {renda * 20:.2f}).')
